@@ -9,7 +9,7 @@ class PredictRequest(BaseModel):
     data: List[str]
 
     @validator("data")
-    def check_dimensionality(self, words):
+    def check_dimensionality(cls, words):
         if len(words) != n_features:
             raise ValueError(f"Input must contain {n_features} words")
 

@@ -1,3 +1,7 @@
 pydantic
 fastapi
 uvicorn
+joblib
+pathlib
+numpy
+typing
