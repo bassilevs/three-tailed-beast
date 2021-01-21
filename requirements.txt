@@ -5,3 +5,12 @@ joblib
 pathlib
 numpy
 typing
+
+torch
+tqdm 
+boto3 
+requests 
+regex 
+sentencepiece 
+sacremoses 
+pytorch-transformers

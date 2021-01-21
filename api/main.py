@@ -1,19 +1,11 @@
 from fastapi import FastAPI, Depends
-from pydantic import BaseModel, validator
+from pydantic import BaseModel
 
-from .alexaDL.model import Model, get_model, n_features
-from typing import List
+from .story_time.gpt_2_pytorch import Model, get_model
 
 
 class PredictRequest(BaseModel):
-    data: List[str]
-
-    @validator("data")
-    def check_dimensionality(cls, words):
-        if len(words) != n_features:
-            raise ValueError(f"Input must contain {n_features} words")
-
-        return words
+    data: str
 
 
 class PredictResponse(BaseModel):
@@ -26,7 +18,7 @@ app = FastAPI()
 @app.post("/predict", response_model=PredictResponse)
 def predict(x: PredictRequest, model: Model = Depends(get_model)):
     x = x.data
-    y_pred = model.predict(x)
+    y_pred = model.get_next_n_words(x, 3)
     result = PredictResponse(data=y_pred)
 
     return result
