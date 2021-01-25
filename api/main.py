@@ -17,7 +17,7 @@ app = FastAPI()
 
 @app.get("/ping")
 def ping():
-    return "version 2.0"
+    return "version 1.0.0"
 
 
 @app.post("/predict", response_model=PredictResponse)

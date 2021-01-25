@@ -33,11 +33,12 @@ class Model:
 
     def get_next_n_words(self, curr_text, n):
         """Get the next n words for curr_text"""
+        temp_text = curr_text + ""
         for i in range(n):
             next_word = self.get_next_word(curr_text)
-            curr_text = curr_text + " " + next_word
+            temp_text += next_word if next_word == "." else " " + next_word
 
-        return curr_text
+        return temp_text[len(curr_text):]
 
     def load(self):
         try:
