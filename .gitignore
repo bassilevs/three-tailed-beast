@@ -318,7 +318,10 @@ override.tf.json
 
 # Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
 # example: *tfplan*
+/terraform/terraform.tfvars
 
 # End of https://www.toptal.com/developers/gitignore/api/terraform
 
 # End of https://www.toptal.com/developers/gitignore/api/python,pycharm,jupyternotebooks,macos
+
+/terraform/.terraform.lock.hcl

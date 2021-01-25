@@ -1,21 +1,23 @@
 ### Story Time
+DL based interactive Alexa skill. You create a story with Alexa by taking turns and saying three words on each turn.
 
-### Deploy to Digital Ocean manually
-1. Create droplet with Docker image from marketplace attaching your ssh key
-2. Test ssh connection: `ssh root@<droplet-ip>`
-3. Upload all the files from repo to the droplet: `scp -r * root@<droplet-ip>:/root/`
-4. Login with ssh: `ssh root@<droplet-ip>`
-5. Run the app: `docker-compose up -d`
-6. Stop the app: `docker-compose down`
+### Run API locally
+After you have cloned the repository, install the dependencies with pip
 
-### Install dependencies for the DL model
-<pre>
-pip install torch
+`pip install -r requirements.txt`
 
-pip install tqdm boto3 requests regex sentencepiece sacremoses
+Run application with
 
-pip install pytorch-transformers
-</pre>
+`uvicorn api.main:app`
+
+### Run API on Digital Ocean
+1. Install terraform 
+2. Go to the terraform directory in the project
+3. Create `terraform.tfvars` file and initialize all the variables present in the `variables.tf` (`terraform.tfvars.example` included)
+4. Run `terraform init` 
+5. To see what changes the script will make to the cloud run `terraform plan`
+6. To execute the script run `terraform apply`
+7. To remove all the resources which where created run `terraform destroy`
 
 ### Authors:
 * Nino Basilaia ninucabas@gmail.com

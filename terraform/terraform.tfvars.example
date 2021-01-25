@@ -1,0 +1,2 @@
+do_token = "DIGITAL_OCEAN_ACCESS_TOKEN"
+pvt_key = "PATH_TO_SSH_KEY" //example: /Users/username/.ssh/id_rsa
