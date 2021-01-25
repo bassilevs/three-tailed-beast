@@ -15,6 +15,5 @@ jobs:
         - docker push $DOCKER_USERNAME/alexa-story-time-api
       on:
         tags: true
-        condition: "$TRAVIS_TAG =~ ^(\d+\.)?(\d+\.)?(\*|\d+)$"
 
 
