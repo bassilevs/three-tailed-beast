@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/bassilevs/story-time.svg?token=bDqHruNgVxKBTS5Au7qq&branch=master)](https://travis-ci.com/bassilevs/story-time)
+
 ### Story Time
 DL based interactive Alexa skill. You create a story with Alexa by taking turns and saying three words on each turn.
 
