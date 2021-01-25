@@ -15,6 +15,11 @@ class PredictResponse(BaseModel):
 app = FastAPI()
 
 
+@app.get("/ping")
+def ping():
+    return "version 1.0"
+
+
 @app.post("/predict", response_model=PredictResponse)
 def predict(x: PredictRequest, model: Model = Depends(get_model)):
     x = x.data

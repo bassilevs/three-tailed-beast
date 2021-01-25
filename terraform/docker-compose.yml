@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  three-tailed-beast-dl-api:
+    image: ninucabas/alexa-story-time-api
+    ports:
+      - 8000:8000
+  watchtower:
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: --interval 60
