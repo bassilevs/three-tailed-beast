@@ -4,16 +4,17 @@ branches:
   only:
     - master
 
-jobs:
-  include:
-    - stage: build docker image
-      script:
-        - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-        - docker build -t alexa-story-time-api .
-        - docker images
-        - docker tag alexa-story-time-api $DOCKER_USERNAME/alexa-story-time-api
-        - docker push $DOCKER_USERNAME/alexa-story-time-api
-      on:
-        tags: true
+on:
+  tags: true
+
+before_script:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+
+script:
+  - docker build -t alexa-story-time-api .
+  - docker images
+  - docker tag alexa-story-time-api $DOCKER_USERNAME/alexa-story-time-api
+  - docker push $DOCKER_USERNAME/alexa-story-time-api
+
 
 
