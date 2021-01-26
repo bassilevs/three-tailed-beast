@@ -34,16 +34,23 @@ class Model:
     def get_next_n_words(self, curr_text, n):
         """Get the next n words for curr_text"""
         temp_text = curr_text + ""
+        print("before", temp_text, n)
         for i in range(n):
             next_word = self.get_next_word(temp_text)
-            temp_text += next_word if next_word == "." else " " + next_word
+            print(next_word)
+            if next_word in ['.', ',', '!', '?', '', ' ']:
+                temp_text += next_word
+                next_word = self.get_next_word(temp_text)
+                print("next", next_word)
+            temp_text += " " + next_word
 
+        print("final", temp_text)
         return temp_text[len(curr_text):]
 
     def load(self):
         try:
-            self._tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
-            self._model = GPT2LMHeadModel.from_pretrained("gpt2")
+            self._tokenizer = GPT2Tokenizer.from_pretrained("gpt2-medium")
+            self._model = GPT2LMHeadModel.from_pretrained("gpt2-medium")
         except:
             self._model = None
         return self
@@ -54,4 +61,3 @@ model = Model()
 
 def get_model():
     return model
-
