@@ -35,7 +35,7 @@ class Model:
         """Get the next n words for curr_text"""
         temp_text = curr_text + ""
         for i in range(n):
-            next_word = self.get_next_word(curr_text)
+            next_word = self.get_next_word(temp_text)
             temp_text += next_word if next_word == "." else " " + next_word
 
         return temp_text[len(curr_text):]
