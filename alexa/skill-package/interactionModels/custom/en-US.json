@@ -1,0 +1,96 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "three tailed beast",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": [
+            "let\u0027s end it",
+            "let\u0027s finish",
+            "finish the story",
+            "finish the tale",
+            "end story",
+            "end tale",
+            "end",
+            "finish story",
+            "finish tale",
+            "finish"
+          ]
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": [
+            "i don\u0027t want to read anymore",
+            "i don\u0027t want to read"
+          ]
+        },
+        {
+          "name": "HelloWorldIntent",
+          "slots": [],
+          "samples": [
+            "hello",
+            "how are you",
+            "say hi world",
+            "say hi",
+            "hi",
+            "say hello world",
+            "say hello"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.YesIntent",
+          "samples": []
+        },
+        {
+          "name": "QueryIntent",
+          "slots": [
+            {
+              "name": "query",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            " {query}"
+          ]
+        },
+        {
+          "name": "CreateNewTaleIntent",
+          "slots": [],
+          "samples": [
+            "i want to create new story",
+            "i want to create new tale",
+            "i want to create story",
+            "i want to create tale",
+            "create new tale",
+            "create new story",
+            "i want to create new",
+            "i want to create",
+            "let\u0027s create new",
+            "let\u0027s create",
+            "create new",
+            "create"
+          ]
+        },
+        {
+          "name": "AMAZON.NoIntent",
+          "samples": [
+            "nothing",
+            "none",
+            "neither"
+          ]
+        }
+      ],
+      "types": []
+    }
+  },
+  "version": "8"
+}

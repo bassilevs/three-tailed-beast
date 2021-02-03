@@ -320,6 +320,11 @@ override.tf.json
 # example: *tfplan*
 /terraform/terraform.tfvars
 
+ask-resources.json
+.ask
+.vscode
+lambda/node_modules
+
 # End of https://www.toptal.com/developers/gitignore/api/terraform
 
 # End of https://www.toptal.com/developers/gitignore/api/python,pycharm,jupyternotebooks,macos
