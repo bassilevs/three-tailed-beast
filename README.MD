@@ -4,8 +4,11 @@
 DL based interactive Alexa skill. You create a story with Alexa by taking turns and saying three words on each turn.
 
 ### Alexa examples
-<img align="left" width="100" height="auto" src="resources/alexa_example1.png">
-<img align="right" width="100" height="auto" src="resources/alexa_example2.png">
+<p float="left">
+  <img align="left" width="200" height="auto" src="resources/alexa_example1.png">
+  <img align="right" width="200" height="auto" src="resources/alexa_example2.png">
+</p>
+
 
 ### Alexa skill instructions
 * Create s3 bucket and replace BUCKET_NAME in `constants.py` with your bucket name.
