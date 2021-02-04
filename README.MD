@@ -1,7 +1,14 @@
 [![Build Status](https://travis-ci.com/bassilevs/story-time.svg?token=bDqHruNgVxKBTS5Au7qq&branch=master)](https://travis-ci.com/bassilevs/story-time)
 
-### Story Time
+### Three Tailed Beast
 DL based interactive Alexa skill. You create a story with Alexa by taking turns and saying three words on each turn.
+
+### Alexa examples
+![alt text](resources/alexa_example1.png)
+
+### Alexa skill instructions
+* Create s3 bucket and replace BUCKET_NAME in `constants.py` with your bucket name.
+* Replace API_URL with droplet IP or ngrok domain
 
 ### Run API locally
 After you have cloned the repository, install the dependencies with pip
@@ -11,6 +18,8 @@ After you have cloned the repository, install the dependencies with pip
 Run application with
 
 `uvicorn api.main:app`
+
+Host api with ngrok
 
 ### Run API on Digital Ocean
 1. Install terraform 
