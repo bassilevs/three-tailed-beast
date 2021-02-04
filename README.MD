@@ -11,8 +11,9 @@ DL based interactive Alexa skill. You create a story with Alexa by taking turns 
 
 
 ### Alexa skill instructions
-* Create s3 bucket and replace BUCKET_NAME in `constants.py` with your bucket name.
-* Replace API_URL with droplet IP or ngrok domain
+All you need to do is update following constant variable in `constants.py`
+* Create s3 bucket and replace `BUCKET_NAME` with your bucket name.
+* Replace `API_URL` with droplet IP or ngrok domain
 
 ### Run API locally
 After you have cloned the repository, install the dependencies with pip
