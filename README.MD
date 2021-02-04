@@ -5,8 +5,9 @@ Fun, interactive, intelligent, DL based Alexa skill. Alexa helps you to write a 
 
 ### Alexa examples
 <p float="left">
-  <img width="360" height="auto" src="resources/alexa_example1.png">
-  <img width="360" height="auto" src="resources/alexa_example2.png">
+  <img width="240" height="auto" src="resources/alexa_1.png">
+  <img width="240" height="auto" src="resources/alexa_2.png">
+  <img width="240" height="auto" src="resources/alexa_3.png">
 </p>
 
 
