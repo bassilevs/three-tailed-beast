@@ -13,8 +13,10 @@ We derived our inspiration for this skill from a talk show interview on [YouTube
 
 ## The Deep Learning and NLP behind the scenes
 
-### The model
-To accomplish something so nice, it's fairly obvious that a powerful model was needed. While we tried to obtain results with **LSTM** based models, since they are supposed to be good with sequences and can hold the context over a long sequence, we were disappointed with the outcome. The model gave mostly repetitive predictions. Also, it was fairly difficult to train the model, since it would take quite long for even a single epoch of training (we used the **Project Gutenberg books** dataset, which has more than 50,000 books. However, even attempting to train on just a few books proved futile). Thus we decided to move to a pre-trained model, the **GPT-2**. <br>
+### The LSTM model
+To accomplish something so nice, it's fairly obvious that a powerful model was needed. While we tried to obtain results with **LSTM** based models, since they are supposed to be good with sequences and can hold the context over a long sequence, we were disappointed with the outcome. The model gave mostly repetitive predictions. Also, it was fairly difficult to train the model, since it would take quite long for even a single epoch of training (we used the **Project Gutenberg books** dataset, which has more than 50,000 books. However, even attempting to train on just a few books proved futile). Thus we decided to move to a pre-trained model, the **GPT-2**.
+
+### The GPT-2 model
 The [Pytorch Transformers](https://pytorch.org/hub/huggingface_pytorch-transformers/) library offers a wide array of powerful transformer based models, and we decided to use the GPT-2 since it's considered state-of-the-art. We first used the small version of the model, which gave us decent results. However, we soon shifted to the medium version, when while testing we found that it was giving more reasonable predictions at a non-noticeable delay.
 
 ### Example
