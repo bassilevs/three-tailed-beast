@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.com/bassilevs/story-time.svg?token=bDqHruNgVxKBTS5Au7qq&branch=master)](https://travis-ci.com/bassilevs/story-time)
 
 ### Three Tailed Beast
-DL based interactive Alexa skill. You create a story with Alexa by taking turns and saying three words on each turn.
+Fun, interactive, intelligent, DL based Alexa skill. Alexa helps you to write a story by taking turns and saying three words on each turn. She gives you creative continuations for the sentences and in the end you get a nice small tales, which you can save and tell alexa to read it to you later.
 
 ### Alexa examples
 <p float="left">
